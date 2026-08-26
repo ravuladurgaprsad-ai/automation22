@@ -1,0 +1,21 @@
+{
+ "label":{ "email":"durga@mail.com","paswrdd":"12345"},
+    "placehold":{"name":"durga"},
+    "testid":{"name":"John Doe"},
+    "static":{"headers":["BookName","Author","Subject","Price"]},
+    "shadow":{"helo":"helowwww"},
+    "wikipedia":{"searchdata":"playwright"},
+    "alerttextmesg":{"hel":"Hello durgaprasad! How are you today?","cancelconfm":"You pressed Cancel!"}
+    
+
+
+
+
+
+
+
+
+
+
+
+}
