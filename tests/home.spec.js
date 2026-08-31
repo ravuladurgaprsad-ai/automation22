@@ -14,7 +14,7 @@ await loc.practice.click()
 })
 
 test('practice getbyrole',async ({page})=>{
-let loc=await new homepage(page)
+let loc= new homepage(page)
 await loc.primbtn.click()
 await loc.togbt.click()
 await loc.checkbx.check()
@@ -45,7 +45,7 @@ test('getalttext',async({page})=>{
     await loc.alttext.screenshot({path:'./tests/screenshots/alttext.png'})
 })
 test('getbytitle',async({page})=>{
-let loc =await new homepage(page)
+let loc = new homepage(page)
 await loc.htmls.scrollIntoViewIfNeeded()
 await loc.htmls.hover()
 await page.waitForTimeout(2000)
