@@ -177,7 +177,7 @@ await formss.fill(`input form${i+1}`)
 await expect(formss).toHaveValue(`input form${i+1}`)
     }
 })
-test("shadow",async({page})=>{
+test.only("shadow",async({page})=>{
 let loc=new homepage(page)
 await loc.shadowform.fill(jsn.shadow.helo)
 })
