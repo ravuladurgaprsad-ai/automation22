@@ -23,20 +23,20 @@ await loc.glink.click()
 
 })
 test('getbytext()',async ({page})=>{
-let loc=await new homepage(page)
+let loc= new homepage(page)
 await loc.texts.scrollIntoViewIfNeeded()
 await expect(loc.texts).toBeVisible()
 await loc.subtext.click()
 })
 test('getbylabel',async({page})=>{ 
-let loc=await new homepage(page)
+let loc= new homepage(page)
 await loc.emails.fill(jsn.label.email)
 await loc.paswrd.fill(jsn.label.paswrdd)
 await loc.strd.check()
 })
 
 test('getbyplaceholder',async({page})=>{
-let loc=await new homepage(page)
+let loc=new homepage(page)
 await loc.plcname.fill(jsn.placehold.name)
 })
 test('getalttext',async({page})=>{
@@ -53,12 +53,12 @@ await expect(loc.htmls).toBeVisible()
 
 })
 test('getbytestid',async({page})=>{
-let loc=await new homepage(page)
+let loc= new homepage(page)
 await loc.testprof.scrollIntoViewIfNeeded()
 expect(loc.testprof).toContainText(jsn.testid.name)
 })
 test("file uploading",async({page})=>{
-    let loc=await new homepage(page)
+    let loc= new homepage(page)
     
     await loc.multifile.click()
     await page.waitForTimeout(3000)
@@ -85,7 +85,7 @@ console.log(header)
 await expect(header).toEqual(jsn.static.headers)
 })
 test("verify no of rows",async({page})=>{
-let loc=await new homepage(page)
+let loc= new homepage(page)
 let row=await loc.rows.count()
 await expect(row).toBe(7)
 console.log(row)
@@ -100,7 +100,7 @@ test("verify author and specific subject",async({page})=>{
     console.log(await loc.subject.textContent())
 })
 test("verify prices author using",async({page})=>{
-    let loc=await new homepage(page)
+    let loc= new homepage(page)
     let prices=await loc.authorprice.allTextContents()
     let unique=[...new Set(prices.map((dups)=>parseInt(dups.trim())))]
     console.log(unique)
@@ -168,7 +168,7 @@ for(let j=0;j<rows;j++){
 console.log(`total price sum is${totalsum}`)
 expect(totalsum).toBeGreaterThan(0)  
 })
-test.only("3forms at one time fill",async({page})=>{
+test("3forms at one time fill",async({page})=>{
     let loc= new homepage(page)
     let form=await loc.forms.count()
     for(let i=0;i<form;i++){
